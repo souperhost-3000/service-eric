@@ -2,7 +2,6 @@ const db = require('./index.js');
 const Image = require('./image.js');
 
 const samples = [];
-// Insert 100 item listings into database with 20 random house images for each item listing
 for (let i = 1; i <= 100; i += 1) {
   const image = {
     listing_id: i,
