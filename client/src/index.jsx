@@ -18,7 +18,7 @@ class App extends React.Component {
 
   getImages(listingId) {
     axios.get(`/api/images/${listingId}`).then((data) => {
-      this.setState({ imageData: data.data });
+      this.setState({ imageData: data });
     }).catch((err) => {
       console.log('Error getting image data', err);
     });
