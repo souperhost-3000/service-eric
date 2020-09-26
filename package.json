@@ -16,15 +16,16 @@
     "test:coverage": "jest --coverage --colors"
   },
   "dependencies": {
+    "@types/jest": "^26.0.14",
     "axios": "^0.20.0",
     "body-parser": "^1.19.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
     "express": "^4.17.1",
     "faker": "^5.1.0",
     "mongoose": "^5.10.6",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.5"
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",

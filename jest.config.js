@@ -10,7 +10,7 @@ module.exports = {
   coverageDirectory: 'coverage',
 
   // An array of file extensions your modules use
-  moduleFileExtensions: ['js', 'json', 'jsx'],
+  moduleFileExtensions: ['js', 'json', 'jsx', 'ts', 'tsx'],
 
   // The paths to modules that run some code to configure or set up the testing environment
   // before each test
@@ -28,12 +28,12 @@ module.exports = {
 
   // This option sets the URL for the jsdom environment.
   // It is reflected in properties such as location.href
-  testURL: 'http://localhost',
+  testURL: 'http://localhost:3000',
 
   // An array of regexp pattern strings that are matched
   // against all source file paths, matched files will skip transformation
   transformIgnorePatterns: ['<rootDir>/node_modules/'],
 
   // Indicates whether each individual test should be reported during the run
-  verbose: false,
+  verbose: true,
 };
