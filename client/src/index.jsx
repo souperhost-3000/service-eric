@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unused-state */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
@@ -18,7 +19,7 @@ class App extends React.Component {
 
   getImages(listingId) {
     axios.get(`/api/images/${listingId}`).then((data) => {
-      this.setState({ imageData: data.data });
+      this.setState({ imageData: data });
     }).catch((err) => {
       console.log('Error getting image data', err);
     });
