@@ -13,13 +13,9 @@ for (let i = 1; i <= 100; i += 1) {
   };
   for (let j = 0; j < 20; j += 1) {
     const description = Faker.lorem.sentence();
-    if (j === 0) {
-      image.images.push('https://loremflickr.com/g/1200/900/house,exterior/all');
-      image.descriptions.push(description);
-    } else {
-      image.images.push('https://loremflickr.com/g/1200/900/house,interior/all');
-      image.descriptions.push(description);
-    }
+    const randomInt = Math.floor(Math.random() * 101);
+    image.images.push(`https://fec-airbnb-images.s3-us-west-2.amazonaws.com/image_${randomInt}.jpg`);
+    image.descriptions.push(description);
   }
   samples.push(image);
 }
