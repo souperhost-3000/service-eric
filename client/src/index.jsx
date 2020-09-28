@@ -2,6 +2,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import styled from 'styled-components';
+
+const StyledHeader = styled.h1`
+  font: Montserrat;
+  font-weight: lighter;
+`;
 
 class App extends React.Component {
   constructor(props) {
@@ -27,7 +33,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>Hello from React!</div>
+      <StyledHeader>Hello from React!</StyledHeader>
     );
   }
 }
