@@ -8,6 +8,11 @@ const StyledHeader = styled.h1`
   font-weight: lighter;
 `;
 
+const StyledImg = styled.img`
+  width: 20px;
+  height: 20px;
+`;
+
 function App() {
   const [imageData, setImageData] = useState({ images: ['https://fec-airbnb-images.s3-us-west-2.amazonaws.com/image_53.jpg'] });
 
@@ -24,7 +29,11 @@ function App() {
 
   return (
     <div>
-      <StyledHeader>{imageData.images}</StyledHeader>
+      <StyledHeader>Luxury lodge with amazing views</StyledHeader>
+      <span>
+        <StyledImg src="https://ghrsea12-fec.s3-us-west-2.amazonaws.com/sample/star.png" alt="rating star image" />
+      </span>
+      <span> 4.87</span>
     </div>
   );
 }
