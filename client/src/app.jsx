@@ -15,6 +15,14 @@ const StyledImg = styled.img`
   height: 20px;
 `;
 
+const MainPhotosDiv = styled.div`
+max-width: 1120px;
+height: 100% !important;
+margin-left: auto !important;
+margin-right: auto !important;
+width: 100% !important;
+`;
+
 function App() {
   const [imageData, setImageData] = useState({ images: ['https://fec-airbnb-images.s3-us-west-2.amazonaws.com/image_53.jpg'] });
 
@@ -31,16 +39,15 @@ function App() {
 
   return (
     <div>
-      <StyledHeader>Luxury lodge with incredible views of Lake Washington</StyledHeader>
-      <span>
-        <StyledImg src="https://ghrsea12-fec.s3-us-west-2.amazonaws.com/sample/star.png" alt="rating star image" />
-      </span>
-      <span>4.87</span>
-
-      <div>
+      <MainPhotosDiv>
+        <StyledHeader>Luxury lodge with incredible views of Lake Washington</StyledHeader>
+        <span>
+          <StyledImg src="https://ghrsea12-fec.s3-us-west-2.amazonaws.com/sample/star.png" alt="rating star image" />
+        </span>
+        <span>4.87</span>
         <br />
         <Photos imageData={imageData} />
-      </div>
+      </MainPhotosDiv>
 
     </div>
   );
