@@ -1,7 +1,9 @@
+/* eslint-disable import/extensions */
 /* eslint-disable react/no-unused-state */
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
+import Photos from './photos.jsx';
 
 const StyledHeader = styled.h1`
   font: Montserrat;
@@ -24,16 +26,22 @@ function App() {
   }
 
   useEffect(() => {
-    getImages(1);
+    getImages(5);
   }, []);
 
   return (
     <div>
-      <StyledHeader>Luxury lodge with amazing views</StyledHeader>
+      <StyledHeader>Luxury lodge with incredible views of Lake Washington</StyledHeader>
       <span>
         <StyledImg src="https://ghrsea12-fec.s3-us-west-2.amazonaws.com/sample/star.png" alt="rating star image" />
       </span>
       <span>4.87</span>
+
+      <div>
+        <br />
+        <Photos imageData={imageData} />
+      </div>
+
     </div>
   );
 }
