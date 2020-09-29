@@ -33,7 +33,7 @@ function App() {
       <span>
         <StyledImg src="https://ghrsea12-fec.s3-us-west-2.amazonaws.com/sample/star.png" alt="rating star image" />
       </span>
-      <span> 4.87</span>
+      <span>4.87</span>
     </div>
   );
 }
