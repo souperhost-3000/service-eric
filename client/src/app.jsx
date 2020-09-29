@@ -13,11 +13,9 @@ function App() {
 
   // eslint-disable-next-line camelcase
   function getImages(listingId) {
-    axios.get(`/api/images/${listingId}`).then(({ data }) => {
-      setImageData(data);
-    }).catch((err) => {
-      console.log('Error getting image data', err);
-    });
+    axios.get(`/api/images/${listingId}`)
+      .then(({ data }) => { setImageData(data); })
+      .catch((err) => { console.log('Error getting image data', err); });
   }
 
   useEffect(() => {
