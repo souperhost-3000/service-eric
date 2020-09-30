@@ -23,7 +23,7 @@ function App() {
   return (
     <div>
       <Photos imageData={imageData} viewable={viewable} setViewable={setViewable} />
-      <Modal viewable={viewable} setViewable={setViewable} />
+      <Modal imageData={imageData} viewable={viewable} setViewable={setViewable} />
     </div>
   );
 }
