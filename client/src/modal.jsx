@@ -1,11 +1,24 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const SlideIn = keyframes`
+from {
+    margin-top: 100%;
+  }
+
+  to {
+    margin-top: 0%;
+  }
+`;
 
 const ModalDiv = styled.div`
 width: 1200px;
 height; 1200px;
 margin-left: auto;
 margin-right: auto;
+animation-name: ${SlideIn};
+animation-duration: 400ms;
+animation-iteration-count: 1;
 `;
 
 const CarouselImage = styled.img`
@@ -78,13 +91,18 @@ border: none;
 border-radius: 10%;
 background: none;
 background-color: #ccc;
-position: absolute;
 padding: 10px 20px 10px 20px;
 font-size: 14px;
 left: 38px;
 top: 30px;
 outline: none;
-margin-left: 10em;
+margin-left: -6em;
+
+&:hover {
+filter: brightness(90%);
+transition: .2s;
+}
+
 `;
 
 const CounterButton = styled.button`
@@ -99,10 +117,11 @@ background: white;
 `;
 
 const DescriptionDiv = styled.div`
-font-size: 20px;
+font-size: 16px;
 font: Montserrat;
-margin-left: 19em;
-margin-top: 1em;
+font-color: #ccc;
+text-align: center;
+padding-top: 25px;
 `;
 function Modal({ viewable, setViewable, imageData, current, setCurrent }) {
   if (!viewable) {
