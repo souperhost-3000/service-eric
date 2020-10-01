@@ -6,8 +6,9 @@ import Photos from './photos.jsx';
 import Modal from './modal.jsx';
 
 function App() {
-  const [imageData, setImageData] = useState({ images: ['https://fec-airbnb-images.s3-us-west-2.amazonaws.com/image_53.jpg'] });
+  const [imageData, setImageData] = useState({ images: [] });
   const [viewable, setViewable] = useState(false);
+  const [current, setCurrent] = useState(10);
 
   // eslint-disable-next-line camelcase
   function getImages(listingId) {
@@ -22,8 +23,20 @@ function App() {
 
   return (
     <div>
-      <Photos imageData={imageData} viewable={viewable} setViewable={setViewable} />
-      <Modal imageData={imageData} viewable={viewable} setViewable={setViewable} />
+      <Photos
+        imageData={imageData}
+        viewable={viewable}
+        setViewable={setViewable}
+        setCurrent={setCurrent}
+        current={current}
+      />
+      <Modal
+        imageData={imageData}
+        viewable={viewable}
+        setViewable={setViewable}
+        setCurrent={setCurrent}
+        current={current}
+      />
     </div>
   );
 }
