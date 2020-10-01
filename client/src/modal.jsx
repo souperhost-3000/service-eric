@@ -28,6 +28,7 @@ position: absolute;
 margin-top: 500px;
 background-color: white;
 outline: none;
+cursor: pointer;
 }
 
 &:after {
@@ -55,6 +56,7 @@ position: absolute;
 margin-top: 500px;
 background-color: white;
 outline: none;
+cursor: pointer;
 }
 
 &:after {

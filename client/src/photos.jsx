@@ -9,6 +9,12 @@ padding: 4px;
 float: left;
 border-top-left-radius: 20px;
 border-bottom-left-radius: 20px;
+cursor: pointer;
+
+&:hover {
+filter: brightness(90%);
+transition: .2s;
+}
 `;
 
 const SmallImageTop = styled.img`
@@ -16,6 +22,12 @@ width: 234px;
 height: 248px;
 padding: 4px;
 float: left;
+cursor: pointer;
+
+&:hover {
+    filter: brightness(90%);
+    transition: .2s;
+    }
 `;
 
 const SmallImageTopRight = styled.img`
@@ -24,6 +36,12 @@ height: 248px;
 padding: 4px;
 float: left;
 border-top-right-radius: 20px;
+cursor: pointer;
+
+&:hover {
+    filter: brightness(90%);
+    transition: .2s;
+    }
 `;
 
 const SmallImageBottom = styled.img`
@@ -31,6 +49,12 @@ width: 234px;
 height: 248px;
 padding: 4px;
 float: bottom;
+cursor: pointer;
+
+&:hover {
+    filter: brightness(90%);
+    transition: .2s;
+    }
 `;
 
 const SmallImageBottomRight = styled.img`
@@ -39,6 +63,12 @@ height: 248px;
 padding: 4px;
 float: bottom;
 border-bottom-right-radius: 20px;
+cursor: pointer;
+
+&:hover {
+    filter: brightness(90%);
+    transition: .2s;
+    }
 `;
 
 const MainPhotoDiv = styled.div`
