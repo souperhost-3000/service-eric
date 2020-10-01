@@ -109,14 +109,14 @@ function Modal({ viewable, setViewable, imageData, current, setCurrent }) {
   return (
     <ModalDiv>
       <CloseButton onClick={() => setViewable(!viewable)}>X Close </CloseButton>
-      <LeftButton onClick={() => setCurrent(current === 1 ? 20 : current - 1)} />
-      <RightButton onClick={() => setCurrent(current === 20 ? 1 : current + 1)} />
+      <LeftButton onClick={() => setCurrent(current === 0 ? 19 : current - 1)} />
+      <RightButton onClick={() => setCurrent(current === 19 ? 0 : current + 1)} />
       <CounterButton>
-        {`${current}`} / {imageData.images.length}
+        {`${current + 1}`} / {imageData.images.length}
       </CounterButton>
-      <CarouselImage src={imageData.images[current - 1]} alt="" />
+      <CarouselImage src={imageData.images[current]} alt="" />
       <DescriptionDiv>
-        {imageData.descriptions[current - 1]}
+        {imageData.descriptions[current]}
       </DescriptionDiv>
     </ModalDiv>
   );

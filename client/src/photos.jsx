@@ -76,11 +76,11 @@ function Photos({ imageData, viewable, setViewable, current, setCurrent}) {
       </span>
       <StyledSpan>4.87</StyledSpan>
       <br />
-      <MainImage onClick={() => { setViewable(true); setCurrent(1); }} src={imageData.images[1]} alt="" />
-      <SmallImageTop onClick={() => { setViewable(true); setCurrent(2); }} src={imageData.images[2]} alt="" />
-      <SmallImageTopRight onClick={() => { setViewable(true); setCurrent(3); }} src={imageData.images[3]} alt="" />
-      <SmallImageBottom onClick={() => { setViewable(true); setCurrent(4); }} src={imageData.images[4]} alt="" />
-      <SmallImageBottomRight onClick={() => { setViewable(true); setCurrent(5); }} src={imageData.images[5]} alt="" />
+      <MainImage onClick={() => { setViewable(true); setCurrent(0); }} src={imageData.images[0]} alt="" />
+      <SmallImageTop onClick={() => { setViewable(true); setCurrent(1); }} src={imageData.images[1]} alt="" />
+      <SmallImageTopRight onClick={() => { setViewable(true); setCurrent(2); }} src={imageData.images[2]} alt="" />
+      <SmallImageBottom onClick={() => { setViewable(true); setCurrent(3); }} src={imageData.images[3]} alt="" />
+      <SmallImageBottomRight onClick={() => { setViewable(true); setCurrent(4); }} src={imageData.images[4]} alt="" />
     </MainPhotoDiv>
   );
 }
