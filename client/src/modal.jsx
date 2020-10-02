@@ -55,6 +55,14 @@ border-top: 0.2em solid;
 border-right: 0.2em solid;
 transform: rotate(-135deg);
 }
+
+&:active { 
+    transform: scale(0.95); 
+} 
+
+&:hover {
+    background: #F4F4F4;
+}
 `;
 
 const RightButton = styled.button`
@@ -83,6 +91,14 @@ border-top: 0.2em solid;
 border-right: 0.2em solid;
 transform: rotate(45deg);
 }
+
+&:active { 
+    transform: scale(0.95); 
+} 
+
+&:hover {
+    background: #F4F4F4;
+}
 `;
 
 const CloseButton = styled.button`
@@ -90,7 +106,7 @@ cursor: pointer;
 border: none;
 border-radius: 10%;
 background: none;
-background-color: #ccc;
+background-color: #F4F4F4;
 padding: 10px 20px 10px 20px;
 font-size: 14px;
 left: 38px;
@@ -102,6 +118,10 @@ margin-left: -6em;
 filter: brightness(90%);
 transition: .2s;
 }
+
+&:active { 
+    transform: scale(0.95); 
+} 
 
 `;
 

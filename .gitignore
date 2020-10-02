@@ -6,3 +6,5 @@ node_modules/
 .env
 
 client/dist/bundle.js
+
+coverage
