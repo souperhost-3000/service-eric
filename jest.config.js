@@ -4,6 +4,7 @@ module.exports = {
   ],
   setupFiles: ['<rootDir>/enzyme.config.js'],
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
+  testEnvironment: 'node',
   moduleFileExtensions: [
     'ts',
     'tsx',
