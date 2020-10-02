@@ -4,4 +4,4 @@ orbs:
 workflows:
   app-tests:
     jobs:
-      - run: jest --coverage
+      - run: npm test:coverage
