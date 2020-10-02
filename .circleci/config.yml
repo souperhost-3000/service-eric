@@ -5,6 +5,8 @@ jobs:
   build:
     docker:
       - image: circleci/node:10.15.3
+    environment:
+      - MONGO_URL: "mongodb://localhost/image
     steps:
       - checkout
       - run: npm install
