@@ -8,5 +8,5 @@ jobs:
     steps:
       - checkout
       - run: npm install
-      - run: npm db:setup
+      - run: npm run db:setup
       - run: npm test
