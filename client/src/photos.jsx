@@ -1,6 +1,7 @@
 /* eslint-disable import/extensions */
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const MainImage = styled.img`
 width: 484px;
@@ -71,12 +72,13 @@ cursor: pointer;
     }
 `;
 
-const MainPhotoDiv = styled.div`
+export const MainPhotoDiv = styled.div`
 height: 600px;
 width: 1120px;
 margin-left: auto;
 margin-right: auto;
 `;
+MainPhotoDiv.displayName = 'MainPhotoDiv';
 
 const StyledHeader = styled.h1`
   font: Montserrat;
@@ -94,28 +96,9 @@ font-size: 16px;
 font: Montserrat;
 `;
 
-const ShowAllPhotosButton = styled.button`
-cursor: pointer;
-border: none;
-border-radius: 10%;
-background: none;
-background-color: white;
-position: absolute;
-padding: 10px 20px 10px 20px;
-font-size: 14px;
-left: 38px;
-top: 30px;
-outline: none;
-margin-left: 1200px;
-margin-top:  500px;
-
-&:hover {
-filter: brightness(90%);
-transition: .2s;
-}
-`;
-
-function Photos({ imageData, viewable, setViewable, current, setCurrent}) {
+function Photos({
+  imageData, viewable, setViewable, setCurrent,
+}) {
   if (viewable) {
     return null;
   }
@@ -135,5 +118,12 @@ function Photos({ imageData, viewable, setViewable, current, setCurrent}) {
     </MainPhotoDiv>
   );
 }
+
+Photos.propTypes = {
+  imageData: PropTypes.isRequired,
+  viewable: PropTypes.bool.isRequired,
+  setViewable: PropTypes.func.isRequired,
+  setCurrent: PropTypes.func.isRequired,
+};
 
 export default Photos;

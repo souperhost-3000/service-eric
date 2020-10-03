@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 require('regenerator-runtime');
 const supertest = require('supertest');
 const app = require('../app.js');

@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import PropTypes from 'prop-types';
 
 const SlideIn = keyframes`
 from {
@@ -143,7 +144,9 @@ font-color: #ccc;
 text-align: center;
 padding-top: 25px;
 `;
-function Modal({ viewable, setViewable, imageData, current, setCurrent }) {
+function Modal({
+  viewable, setViewable, imageData, current, setCurrent,
+}) {
   if (!viewable) {
     return null;
   }
@@ -153,7 +156,9 @@ function Modal({ viewable, setViewable, imageData, current, setCurrent }) {
       <LeftButton onClick={() => setCurrent(current === 0 ? 19 : current - 1)} />
       <RightButton onClick={() => setCurrent(current === 19 ? 0 : current + 1)} />
       <CounterButton>
-        {`${current + 1}`} / {imageData.images.length}
+        {`${current + 1}`}
+        {' / '}
+        {imageData.images.length}
       </CounterButton>
       <CarouselImage src={imageData.images[current]} alt="" />
       <DescriptionDiv>
@@ -163,4 +168,11 @@ function Modal({ viewable, setViewable, imageData, current, setCurrent }) {
   );
 }
 
+Modal.propTypes = {
+  imageData: PropTypes.isRequired,
+  viewable: PropTypes.bool.isRequired,
+  setViewable: PropTypes.func.isRequired,
+  current: PropTypes.number.isRequired,
+  setCurrent: PropTypes.isRequired,
+};
 export default Modal;

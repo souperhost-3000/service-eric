@@ -18,7 +18,8 @@ function App() {
   }
 
   useEffect(() => {
-    getImages(5);
+    const randInt = Math.floor(Math.random() * 101);
+    getImages(randInt);
   }, []);
 
   return (

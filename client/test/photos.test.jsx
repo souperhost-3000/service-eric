@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable import/extensions */
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 import Photos from '../src/photos.jsx';
 import App from '../src/app.jsx';
 
@@ -18,5 +18,7 @@ describe('Photos component', () => {
   it('should render Photos component', () => {
     const photoWrapper = shallow(<Photos imageData={imageData} />);
     expect(photoWrapper.exists()).toBe(true);
+
+    expect(photoWrapper.find('MainPhotoDiv').length).toBe(1);
   });
 });
