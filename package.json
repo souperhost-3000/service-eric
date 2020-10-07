@@ -8,7 +8,7 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "nodemon server/index.js",
+    "start": "node database/seed.js && nodemon server/index.js",
     "dev:react": "webpack -d --watch",
     "db:setup": "node database/seed.js",
     "test": "jest",
@@ -27,6 +27,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-test-renderer": "^16.13.1",
     "regenerator-runtime": "^0.13.7",
     "styled-components": "^5.2.0",
     "supertest": "^5.0.0"
