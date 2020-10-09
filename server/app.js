@@ -1,10 +1,12 @@
 /* eslint-disable no-console */
 const express = require('express');
 const bodyParser = require('body-parser');
+const compression = require('compression');
 const Image = require('../database/image.js');
 
 const app = express();
 
+app.use(compression());
 app.use(bodyParser.json());
 app.use(express.static(`${__dirname}/../client/dist`));
 

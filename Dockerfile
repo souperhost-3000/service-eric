@@ -7,7 +7,6 @@ COPY . src/app
 WORKDIR src/app
 
 RUN npm install
-RUN npm run dev:react
 
 EXPOSE 3000
 

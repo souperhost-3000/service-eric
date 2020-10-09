@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const mongoUri = 'mongodb://localhost:27017/image';
+const mongoUri = 'mongodb://database/image';
 
 const db = mongoose.connect(mongoUri);
 
