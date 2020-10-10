@@ -14,6 +14,7 @@ app.get('/api/images/:listing_id', (req, res) => {
   const id = req.params.listing_id;
   Image.findOne({ listing_id: id })
     .then((data) => {
+      res.setHeader('Cache-Control', 'max-age=300');
       res.send(data);
     })
     .catch((err) => {
